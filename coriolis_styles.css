@@ -1,0 +1,30 @@
+.autocols-2 {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+#npcs {
+    float: left;
+}
+
+.npc {
+    margin-bottom: 1em;
+    width: 100%;
+    overflow: hidden;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.profession, .characteristic, .activity {
+    float: left;
+    margin-right: .5em;
+    padding-right: .5em;
+    border-right: 1px solid black;
+}
+
+.activity {
+    border-right: none;
+}
