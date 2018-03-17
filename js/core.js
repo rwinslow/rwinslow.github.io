@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // First, checks if it isn't implemented yet.
+    // Add format method for strings.
     if (!String.prototype.format) {
         String.prototype.format = function() {
             var args = arguments;
@@ -12,30 +12,26 @@ $(document).ready(function(){
         };
     }
 
-    // Show page if user goes straight to a link with hash.
-    if (window.location.hash) {
-        var hash = window.location.hash.substr(1);
+    function showHashPage(hash) {
+        // Show hash-labeled page if given, otherwise home.
+        hash = hash ? hash : 'home';
+        $('.sidebar-nav li a').removeClass('on');
+        $('#page-content-wrapper > .container-fluid > div').hide();
         $('#page-content-wrapper > .container-fluid > div.' + hash).show();
         $('.toggle>a.' + hash).addClass('on');
     }
 
-    // Show page from hash as user moves forward and backward.
-    $(window).on('hashchange', function() {
-        $('.sidebar-nav li a').removeClass('on');
-        $('#page-content-wrapper > .container-fluid > div').hide();
+    // Show page if user goes straight to a link with hash.
+    showHashPage(window.location.hash.substr(1));
 
-        var hash = window.location.hash.substr(1);
-        $('#page-content-wrapper > .container-fluid > div.' + hash).show();
-        $('.toggle>a.' + hash).addClass('on');
+    // Add event handler to show page from hash as user moves forward and backward.
+    $(window).on('hashchange', function() {
+        showHashPage(window.location.hash.substr(1));
     });
 
-    // Toggle links and pages on click.
+    // Add event handler to toggle link styles and pages visibility on click.
     $('.toggle>a').click(function() {
-        var classname = $(this).attr('class');
-        $('.sidebar-nav li a').removeClass('on');
-        $(this).addClass('on');
-        $('#page-content-wrapper > .container-fluid > div').hide();
-        $('#page-content-wrapper > .container-fluid > div.' + classname).show();
+        showHashPage($(this).attr('class'));
     });
 });
 

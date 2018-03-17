@@ -27,7 +27,6 @@ function getNPC() {
             <div class="profession">{2}</div>
             <div class="characteristic">{3}</div>
             <div class="activity">{4}</div>
-        </div>`.format(
-        firstName, lastName, profession, characteristic, activity);
+        </div>`.format(firstName, lastName, profession, characteristic, activity);
     $(".npcs").append(npc);
 }
