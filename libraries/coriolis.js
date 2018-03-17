@@ -5,25 +5,12 @@ var characteristics = ['Fat','Skinny','Good-looking','Seductive','Smells bad','S
 var activities = ['Searching','Making friends','Rambling tediously','Flirts','Looking for a fight','On a stroll','Working','Chasing something','Is lost','Guarding something','Brat Drinking','Partying','Eating','Bickering','In a discussion','Studying','Reading','Resting','Mending something','Showing something','Staring','Hanging out','Smoking','Writing','Preaching','Hiding','Sleeping','On a delivery','Looking to sell something','Using a tabula','Collapsing','Stealing something','Praying to an Icon','Threatening someone','Helping someone','Getting into trouble'];
 
 $(document).ready(function(){
-    // First, checks if it isn't implemented yet.
-    if (!String.prototype.format) {
-    String.prototype.format = function() {
-        var args = arguments;
-        return this.replace(/{(\d+)}/g, function(match, number) {
-        return typeof args[number] != 'undefined'
-            ? args[number]
-            : match
-        ;
-        });
-    };
-    }
-
-    $("#generate-npcs").click(function(){ getNPCs(); });
+    $(".generate-npcs").click(function(){ getNPCs(); });
     getNPCs();
 });
 
 function getNPCs(count=16) {
-    $("#npcs").empty();
+    $(".npcs").empty();
     for (let index = 0; index < count; index++) {
         getNPC();
     }
@@ -42,5 +29,5 @@ function getNPC() {
             <div class="activity">{4}</div>
         </div>`.format(
         firstName, lastName, profession, characteristic, activity);
-    $("#npcs").append(npc);
+    $(".npcs").append(npc);
 }

@@ -4,7 +4,7 @@
     column-count: 2;
 }
 
-#npcs {
+.npcs {
     float: left;
 }
 
