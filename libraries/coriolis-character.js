@@ -55,7 +55,7 @@ var concepts = {
         'problems': [
             'You get very jealous when others succeed. It should be your turn now.',
             'You are insanely stubborn and never give up despite negative consequences.',
-            'A faction you have somehow angered isout to get you.'
+            'A faction you have somehow angered is out to get you.'
         ],
         'gear': [
             ['Hand fan','Tabula'],
