@@ -319,7 +319,7 @@ var concepts = {
         'problems': [
             'You have a short fuse and are prone to fits of rage. This often gets you in trouble.',
             'You have a cold heart and would never help someone in need unless you would really benefit from it.',
-            'You have seen the Dark between the Stars,and now,space terrifies you. Sometimes you are able to conquer your fear.',
+            'You have seen the Dark between the Stars, and now, space terrifies you. Sometimes you are able to conquer your fear.',
         ],
         'gear': [
             ['Tools (Ordinary)', 'vacuum sealer'],
