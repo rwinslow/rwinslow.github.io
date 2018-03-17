@@ -9,7 +9,7 @@ $(document).ready(function(){
                 : match
             ;
             });
-        };
+        }
     }
 
     function showHashPage(hash) {
