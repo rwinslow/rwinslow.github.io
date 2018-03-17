@@ -17,11 +17,11 @@ function getNPCs(count=16) {
 }
 
 function getNPC() {
-    var firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-    var lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-    var profession = professions[Math.floor(Math.random() * professions.length)];
-    var characteristic = characteristics[Math.floor(Math.random() * characteristics.length)];
-    var activity = activities[Math.floor(Math.random() * activities.length)];
+    var firstName = getRandomElement(firstNames);
+    var lastName = getRandomElement(lastNames);
+    var profession = getRandomElement(professions);
+    var characteristic = getRandomElement(characteristics);
+    var activity = getRandomElement(activities);
     var npc = `<div class="npc">
             <div class="name">{0} {1}</div>
             <div class="profession">{2}</div>

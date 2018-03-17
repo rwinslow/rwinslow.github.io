@@ -22,7 +22,7 @@
     <link href="css/print.css" media="print" rel="stylesheet">
 
     <!-- Coriolis Styles -->
-    <link href="css/coriolis_styles.css" rel="stylesheet">
+    <link href="css/coriolis-styles.css" rel="stylesheet">
 
 </head>
 
@@ -37,7 +37,10 @@
                     <a href="#">RPG Tools</a>
                 </li>
                 <li class="toggle">
-                    <a class="coriolis-npcs" href="#coriolis-npcs">Coriolis NPCs</a>
+                    <a href="#coriolis-npcs">Coriolis NPCs</a>
+                </li>
+                <li class="toggle">
+                    <a href="#coriolis-characters">Coriolis Characters</a>
                 </li>
             </ul>
         </div>
@@ -55,11 +58,73 @@
                     <div class="row mb-3">
                         <button type="button" class="btn btn-primary col-lg-12 generate-npcs">Generate NPCs</button>
                     </div>
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="npcs autocols-2"></div>
+                    </div>
+                    <div class="row">
+                        <table class="table table-sm text-center table-hover">
+                            <thead class="thead-dark">
+                                <tr><th class="text-left" colspan="7">Common NPC Stats</th></tr>
+                                <tr><th class="text-left" scope="col">NPC</th><th scope="col">STR</th><th scope="col">AGI</th><th scope="col">WITS</th><th scope="col">EMP</th><th scope="col">REP</th><th class="text-left" scope="col">SKILLS</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><th class="text-left" scope="row">Agent</th><td>2</td><td>4</td><td>3</td><td>4</td><td>4</td><td class="text-left">Manipulation 3, Observation 2, Ranged Combat 1</td></tr>
+                                <tr><th class="text-left" scope="row">Data Spider</th><td>2</td><td>3</td><td>5</td><td>3</td><td>4</td><td class="text-left">Data Djinn 3, Manipulation 2, Culture 1</td></tr>
+                                <tr><th class="text-left" scope="row">Negotiator</th><td>2</td><td>2</td><td>4</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Command 1</td></tr>
+                                <tr><th class="text-left" scope="row">Fugitive</th><td>3</td><td>4</td><td>2</td><td>4</td><td>2</td><td class="text-left">Mystic Powers 3, Infiltration 2, Melee Combat 1</td></tr>
+                                <tr><th class="text-left" scope="row">Scientist</th><td>2</td><td>3</td><td>5</td><td>3</td><td>5</td><td class="text-left">Science 3, Technology 2, Observation 1</td></tr>
+                                <tr><th class="text-left" scope="row">Ship Worker</th><td>5</td><td>3</td><td>3</td><td>3</td><td>3</td><td class="text-left">Force 3, Dexterity 2, Melee Combat 1</td></tr>
+                                <tr><th class="text-left" scope="row">Artist</th><td>2</td><td>3</td><td>2</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Dexterity 2, Culture 1</td></tr>
+                                <tr><th class="text-left" scope="row">Soldier</th><td>3</td><td>5</td><td>2</td><td>2</td><td>3</td><td class="text-left">Ranged combat 3, Melee Combat 2, Command 1</td></tr>
+                                <tr><th class="text-left" scope="row">Pilot</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Pilot 3, Data Djinn 2, Technology 1</td></tr>
+                                <tr><th class="text-left" scope="row">Preacher</th><td>2</td><td>2</td><td>4</td><td>4</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Survival 1</td></tr>
+                                <tr><th class="text-left" scope="row">Trailblazer</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Survival 3, Observation 2, Dexterity 1</td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
+                <!-- Coriolis Characters -->
+                <div class="coriolis-characters">
+                    <div class="row mb-3">
+                        <button type="button" class="btn btn-primary col-lg-12 generate-character">Generate Character</button>
+                    </div>
+                    <div class="row mb-3">
+                        <table class="table character">
+                            <tr>
+                                <td colspan="2">
+                                    <div class="pull-left mr-3 background"><strong>Background</strong> <span></span></div>
+                                    <div class="pull-left mr-3 concept"><strong>Concept</strong> <span></span></div>
+                                    <div class="pull-left mr-3 subconcept"><strong>Subconcept</strong> <span></span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="attributes col-lg-2">
+                                    <div class="strength"><strong>Strength</strong> <span></span></div>
+                                    <div class="agility"><strong>Agility</strong> <span></span></div>
+                                    <div class="wits"><strong>Wits</strong> <span></span></div>
+                                    <div class="empathy"><strong>Empathy</strong> <span></span></div>
+                                </td>
+                                <td>
+                                    <div class="face"><strong>Face</strong> <span></span></div>
+                                    <div class="clothing"><strong>Clothing</strong> <span></span></div>
+                                    <div class="birr"><strong>Birr</strong> <span></span></div>
+                                    <div class="icon"><strong>Icon</strong> <span></span></div>
+                                    <div class="talent"><strong>Talent</strong> <span></span></div>
+                                    <div class="gear"><strong>Gear</strong> <span></span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="skills"><strong>Skills</strong> <span></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="problem"><strong>Problem</strong> <span></span></div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -74,7 +139,8 @@
     <script src="js/core.js"></script>
 
     <!-- Coriolis JS -->
-    <script src="libraries/coriolis.js"></script>
+    <script src="libraries/coriolis-npc.js"></script>
+    <script src="libraries/coriolis-statblock.js"></script>
 
 </body>
 

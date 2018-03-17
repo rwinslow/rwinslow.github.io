@@ -28,3 +28,7 @@
 .activity {
     border-right: none;
 }
+
+.pull-left {
+    float: left;
+}
