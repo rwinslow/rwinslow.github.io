@@ -13,7 +13,11 @@ function showHashPage(hash) {
     $('#page-content-wrapper > .container-fluid > div').hide();
     $('#page-content-wrapper > .container-fluid > div.' + hash).show();
     $('a[href="#' + hash + '"]').addClass('on');
-    $('title').text($('a[href="#' + hash + '"]').text());
+    if (hash != 'home') {
+        $('title').text($('a[href="#' + hash + '"]').text());
+    } else {
+        $('title').text('RPG Tools');
+    }
 }
 
 /**
