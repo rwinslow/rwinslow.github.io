@@ -468,7 +468,7 @@ function generateCharacter() {
     while (skillPoints > 0) {
         const skill = getRandomElement(Object.keys(skills));
         if (subconceptSkills.includes(skill) && skills[skill] < 3) {
-            skills[skill] = skills[skill] + Math.min(getRandomInt(0, 3), skillPoints);
+            skills[skill] = skills[skill] + Math.min(getRandomInt(0, 3 - skills[skill]), skillPoints);
             skillPoints = skillPoints - skills[skill];
         } else if (skills[skill] < 1) {
             skills[skill] = skills[skill] + 1;
