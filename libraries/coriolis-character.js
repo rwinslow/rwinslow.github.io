@@ -1,21 +1,21 @@
 var upbringings = {
     'Plebian': {
-        'Attribute Points': 15,
-        'Skill Points': 8,
-        'Reputation': 2,
-        'Birr': 500,
+        'attribute points': 15,
+        'skill points': 8,
+        'reputation': 2,
+        'birr': 500,
     },
     'Stationary': {
-        'Attribute Points': 14,
-        'Skill Points': 10,
-        'Reputation': 4,
-        'Birr': 1000,
+        'attribute points': 14,
+        'skill points': 10,
+        'reputation': 4,
+        'birr': 1000,
     },
     'Privileged': {
-        'Attribute Points': 13,
-        'Skill Points': 12,
-        'Reputation': 6,
-        'Birr': 5000,
+        'attribute points': 13,
+        'skill points': 12,
+        'reputation': 6,
+        'birr': 5000,
     }
 };
 
@@ -401,10 +401,9 @@ function generateCharacter() {
     // Background and upbringing
     var background = getRandomElement(Object.keys(upbringings))
     var upbringing = upbringings[background];
-    var attributePoints = upbringing['Attribute Points'] - 4;
-    var skillPoints = upbringing['Skill Points'];
-    var reputation = upbringing['Reputation'];
-    var birr = upbringing['Birr'];
+    var attributePoints = upbringing['attribute points'] - 4;
+    var skillPoints = upbringing['skill points'];
+    var birr = upbringing['birr'];
     var icon = getRandomElement(icons);
 
     // Concept
@@ -420,6 +419,7 @@ function generateCharacter() {
     var clothing = getRandomElement(conceptDetails['clothing']);
     var talent = getRandomElement(conceptDetails['talents']);
     var problem = getRandomElement(conceptDetails['problems']);
+    var reputation = upbringing['reputation'] + conceptDetails['reputation']
 
     // Attributes
     var attributes = {
@@ -503,6 +503,7 @@ function generateCharacter() {
     $('.character .talent span').html(talent);
     $('.character .icon span').html(icon);
     $('.character .problem span').html(problem);
+    $('.character .reputation span').html(reputation);
     $('.character .birr span').html(birr);
     $('.character .gear span').html(gear.join(', '));
     $('.character .skills span').html(skillsOut.join(', '));
