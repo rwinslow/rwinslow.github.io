@@ -19,6 +19,14 @@ var upbringings = {
     }
 };
 
+var origins = [
+    'Algol',
+    'Mira',
+    'Kua',
+    'Dabaran',
+    'Zalos'
+]
+
 var icons = [
     'The Lady of Tears',
     'The Dancer',
@@ -405,6 +413,7 @@ function generateCharacter() {
     var skillPoints = upbringing['skill points'];
     var birr = upbringing['birr'];
     var icon = getRandomElement(icons);
+    var origin = getRandomElement(origins);
 
     // Concept
     var concept = getRandomElement(Object.keys(concepts));
@@ -505,6 +514,7 @@ function generateCharacter() {
     $('.character .problem span').html(problem);
     $('.character .reputation span').html(reputation);
     $('.character .birr span').html(birr);
+    $('.character .origin span').html(origin);
     $('.character .gear span').html(gear.join(', '));
     $('.character .skills span').html(skillsOut.join(', '));
 }
