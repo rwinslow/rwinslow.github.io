@@ -27,3 +27,12 @@
 .pull-left {
     float: left;
 }
+
+@media(max-width: 760px) {
+    .autocols-2,
+    .autocols-3 {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
