@@ -120,3 +120,27 @@ body {
     margin-right: 0;
   }
 }
+
+@media(max-width: 760px) {
+  #wrapper {
+    padding-left: 0;
+  }
+  #wrapper.toggled {
+    /* padding-left: 250px; */
+    padding-left: 0;
+  }
+  #wrapper.toggled #sidebar-wrapper,
+  #wrapper.toggled #sidebar-wrapper .sidebar-nav {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
