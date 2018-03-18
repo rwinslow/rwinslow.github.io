@@ -504,23 +504,23 @@ function generateCharacter() {
     }
 
     // Fill page
-    $('.character .background span').html(background);
-    $('.character .concept span').html(concept);
-    $('.character .subconcept span').html(subconcept);
-    $('.character .strength span').html(attributes['Strength']);
-    $('.character .agility span').html(attributes['Agility']);
-    $('.character .wits span').html(attributes['Wits']);
-    $('.character .empathy span').html(attributes['Empathy']);
-    $('.character .face span').html(face);
-    $('.character .clothing span').html(clothing);
-    $('.character .talent span').html(talent);
-    $('.character .icon span').html(icon);
-    $('.character .problem span').html(problem);
-    $('.character .reputation span').html(reputation);
-    $('.character .birr span').html(birr);
-    $('.character .origin span').html(origin);
-    $('.character .gear div').html(gearOut.join(''));
-    $('.character .skills div').html(skillsOut.join('\n'));
+    $('.character .background .fill').html(background);
+    $('.character .concept .fill').html(concept);
+    $('.character .subconcept .fill').html(subconcept);
+    $('.character .strength .fill').html(attributes['Strength']);
+    $('.character .agility .fill').html(attributes['Agility']);
+    $('.character .wits .fill').html(attributes['Wits']);
+    $('.character .empathy .fill').html(attributes['Empathy']);
+    $('.character .face .fill').html(face);
+    $('.character .clothing .fill').html(clothing);
+    $('.character .talent .fill').html(talent);
+    $('.character .icon .fill').html(icon);
+    $('.character .problem .fill').html(problem);
+    $('.character .reputation .fill').html(reputation);
+    $('.character .birr .fill').html(birr);
+    $('.character .origin .fill').html(origin);
+    $('.character .gear .fill').html(gearOut.join(''));
+    $('.character .skills .fill').html(skillsOut.join('\n'));
 }
 
 $('.generate-character').click(function() {
