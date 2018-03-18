@@ -28,7 +28,7 @@
     float: left;
 }
 
-@media(max-width: 760px) {
+@media(max-width: 768px) {
     .autocols-2,
     .autocols-3 {
         -moz-column-count: 1;

@@ -121,7 +121,7 @@ body {
   }
 }
 
-@media(max-width: 760px) {
+@media(max-width: 768px) {
   #wrapper {
     padding-left: 0;
   }
