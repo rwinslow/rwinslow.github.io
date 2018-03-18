@@ -489,7 +489,7 @@ function generateCharacter() {
     for (let i = 0; i < Object.keys(skills).length; i++) {
         const skillName = Object.keys(skills)[i];
         if (skills[skillName] > 0) {
-            skillsOut.push(skillName + ' ' + skills[skillName]);
+            skillsOut.push('<div class="skill">{0} {1}</div>'.format(skillName, skills[skillName]));
         }
     }
 
@@ -497,6 +497,10 @@ function generateCharacter() {
     for (let i = 0; i < conceptDetails['gear'].length; i++) {
         const gearOptions = conceptDetails['gear'][i];
         gear[i] = getRandomElement(gearOptions);
+    }
+    var gearOut = [];
+    for (let i = 0; i < gear.length; i++) {
+        gearOut.push('<div class="item">{0}</div>'.format(gear[i]));
     }
 
     // Fill page
@@ -515,8 +519,8 @@ function generateCharacter() {
     $('.character .reputation span').html(reputation);
     $('.character .birr span').html(birr);
     $('.character .origin span').html(origin);
-    $('.character .gear span').html(gear.join(', '));
-    $('.character .skills span').html(skillsOut.join(', '));
+    $('.character .gear div').html(gearOut.join(''));
+    $('.character .skills div').html(skillsOut.join('\n'));
 }
 
 $('.generate-character').click(function() {
