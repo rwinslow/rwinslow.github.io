@@ -474,15 +474,16 @@ function generateCharacter() {
     }
 
     // Set skills
-    while (skillPoints > 0) {
+    while (skillPoints) {
         const skill = getRandomElement(Object.keys(skills));
+        var increment = 0;
         if (subconceptSkills.includes(skill) && skills[skill] < 3) {
-            skills[skill] = skills[skill] + Math.min(getRandomInt(0, 3 - skills[skill]), skillPoints);
-            skillPoints = skillPoints - skills[skill];
+            increment = Math.min(getRandomInt(1, 3 - skills[skill]), skillPoints);
         } else if (skills[skill] < 1) {
-            skills[skill] = skills[skill] + 1;
-            skillPoints = skillPoints - 1;
+            increment = 1;
         }
+        skills[skill] = skills[skill] + increment;
+        skillPoints = skillPoints - increment;
     }
     // Assemble skills into string.
     var skillsOut = [];
