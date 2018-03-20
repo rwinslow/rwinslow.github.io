@@ -57,8 +57,8 @@ var concepts = {
         ],
         'attribute': 'Empathy',
         'reputation': 1,
-        'face': ['Flawless makeup','bedroom eyes','black curls','animate tattoo'],
-        'clothing': ['Silk burra', 'shining dress', 'embroidered djellaba', 'swirling skirts'],
+        'face': ['Flawless makeup','Bedroom eyes','Black curls','Animate tattoo'],
+        'clothing': ['Silk burra', 'Shining dress', 'Embroidered djellaba', 'Swirling skirts'],
         'talents': ['Beautiful (BIO)', 'Defensive', 'Seductive'],
         'problems': [
             'You get very jealous when others succeed. It should be your turn now.',
@@ -123,8 +123,8 @@ var concepts = {
         ],
         'attribute': 'Empathy',
         'reputation': -2,
-        'face': ['Blank stare','facial tattoos','lip ring','shaved head'],
-        'clothing': ['Brown coat','jacket with many pockets','blue patterned gallabeya', 'turban'],
+        'face': ['Blank stare','Facial tattoos','Lip ring','Shaved head'],
+        'clothing': ['Brown coat','Jacket with many pockets','Blue patterned gallabeya', 'Turban'],
         'talents': ['Intimidating', 'Mystical Power', 'Nine Lives'],
         'problems': [
             'A group of zealous Icon believers are on your tail. They know about your powers.',
@@ -156,8 +156,8 @@ var concepts = {
         ],
         'attribute': 'Empathy',
         'reputation': 1,
-        'face': ['Red face','grave looking','stubble','too much makeup'],
-        'clothing': ['Red djellaba with gold embroidery', 'dress uniform', 'black caftan', 'head wrap with a gem'],
+        'face': ['Red face','Grave looking','Stubble','Too much makeup'],
+        'clothing': ['Red djellaba with gold embroidery', 'Dress uniform', 'Black caftan', 'Head wrap with a gem'],
         'talents': ['Faction Standing', 'Language Modulator (CYB)', 'Lie Detector (CYB)'],
         'problems': [
             'You have a protégé that you need to take care of. It could be a relative or a friend you owe a debt of gratitude.',
@@ -165,11 +165,11 @@ var concepts = {
             'You are greedy, and you just have to scam people if you get the chance, even your friends.'
         ],
         'gear': [
-            ['Tabula', 'language modulator (CYB)'],
-            ['Com link V', 'voice amplifier'],
-            ['Exquisite clothing', 'kambra (D6 doses)'],
-            ['Lie detector (CYB)', 'language unit'],
-            ['Vulcan cricket', 'mercurium dagger']
+            ['Tabula', 'Language modulator (CYB)'],
+            ['Com link V', 'Voice amplifier'],
+            ['Exquisite clothing', 'Kambra (D6 doses)'],
+            ['Lie detector (CYB)', 'Language unit'],
+            ['Vulcan cricket', 'Mercurium dagger']
         ]
     },
     'Operative': {
@@ -189,8 +189,8 @@ var concepts = {
         ],
         'attribute': 'Agility',
         'reputation': 0,
-        'face': ['Scarred face','blank stare','cold eyes','crew cut'],
-        'clothing': ['Silk burra', 'shining dress', 'embroidered djellaba', 'swirling skirts'],
+        'face': ['Scarred face','Blank stare','Cold eyes','Crew cut'],
+        'clothing': ['Silk burra', 'Shining dress', 'Embroidered djellaba', 'Swirling skirts'],
         'talents': ['Executioner', 'Intimidating', 'Licensed'],
         'problems': [
             'You are paranoid and rarely trust anybody.',
@@ -198,11 +198,11 @@ var concepts = {
             'You have a dark secret that could turn everyone against you.'
         ],
         'gear': [
-            ['Vulcan cricket', 'advanced melee weapon'],
-            ['Proximity sensor', 'computer'],
-            ['Modulation mask', 'mechanical lockpick'],
-            ['Recon drone', 'an assortment of fake identities'],
-            ['Security tablet', 'poison (5 doses)']
+            ['Vulcan cricket', 'Advanced melee weapon'],
+            ['Proximity sensor', 'Computer'],
+            ['Modulation mask', 'Mechanical lockpick'],
+            ['Recon drone', 'An assortment of fake identities'],
+            ['Security tablet', 'Poison (5 doses)']
         ]
     },
     'Pilot': {
@@ -222,8 +222,8 @@ var concepts = {
         ],
         'attribute': 'Agility',
         'reputation': 0,
-        'face': ['Proud eyes','chiseled features','steely grey eyes','unshaven'],
-        'clothing': ['Pilot\’s uniform', 'leather jacket', 'overalls and safety harness', 'dark green caftan'],
+        'face': ['Proud eyes','Chiseled features','Steely grey eyes','Unshaven'],
+        'clothing': ['Pilot\’s uniform', 'Leather jacket', 'Overalls and safety harness', 'Dark green caftan'],
         'talents': ['Zero-G Training', 'Exo Specialist', 'Targeting Scope (CYB)'],
         'problems': [
             'You are reckless and take stupid risks with yourself and your ship, even when it isn’t necessary.',
@@ -231,11 +231,11 @@ var concepts = {
             'You scare easily and never challenge yourself. Better safe than sorry.'
         ],
         'gear': [
-            ['Tools (Ordinary)', 'talisman (Pilot +1)'],
-            ['Exo shell', 'hand jet'],
-            ['Targeting Scope', 'communicator (IV) (CYB)'],
-            ['Accelerator pistol', 'stun weapon'],
-            ['Flight suit', 'exquisite clothing']
+            ['Tools (Ordinary)', 'Talisman (Pilot +1)'],
+            ['Exo shell', 'Hand jet'],
+            ['Targeting Scope', 'Communicator (IV) (CYB)'],
+            ['Accelerator pistol', 'Stun weapon'],
+            ['Flight suit', 'Exquisite clothing']
         ]
     },
     'Preacher': {
@@ -255,8 +255,8 @@ var concepts = {
         ],
         'attribute': 'Empathy',
         'reputation': 1,
-        'face': ['Mad eyes','fiery speech','frowning','unruly hair'],
-        'clothing': ['Loincloth','black preacher\'s gowns','golden headwrap', 'torn gallabeya'],
+        'face': ['Mad eyes','Fiery speech','Frowning','Unruly hair'],
+        'clothing': ['Loincloth','Black preacher\'s gowns','Golden headwrap', 'Torn gallabeya'],
         'talents': ['Blessing', 'Faction Standing', 'Talisman Maker'],
         'problems': [
             'You only see the worst in people, and you can\'t trust or accept help from anyone.',
@@ -264,11 +264,11 @@ var concepts = {
             'You have seen the power of the Darkness, and throw a fanatical fit if signs of Darkness appear near you.',
         ],
         'gear': [
-            ['Blessed scripture', 'thurible'],
-            ['Talisman', 'cásula (preacher’s robes)'],
-            ['Reliquary', 'written prophecy'],
+            ['Blessed scripture', 'Thurible'],
+            ['Talisman', 'Cásula (preacher’s robes)'],
+            ['Reliquary', 'Written prophecy'],
             ['10 blessed m-doses', '10 herbal remedies'],
-            ['Tabula', 'writing paraphernalia']
+            ['Tabula', 'Writing paraphernalia']
         ]
     },
     'Scientist': {
@@ -288,8 +288,8 @@ var concepts = {
         ],
         'attribute': 'Wits',
         'reputation': 1,
-        'face': ['Curious eyes','smooth forehead','dirty face','hair bund'],
-        'clothing': ['Overalls','labcoat','white djellaba','cargo shorts and boots'],
+        'face': ['Curious eyes','Smooth forehead','Dirty face','Hair bund'],
+        'clothing': ['Overalls','Labcoat','White djellaba','Cargo shorts and boots'],
         'talents': ['Field Medicurg', 'Gearhead', 'Wealthy Family'],
         'problems': [
             'You just can\'t stay off the kohôl. It makes you impulsive and erratic.',
@@ -297,11 +297,11 @@ var concepts = {
             'A competitor has slandered your good name. One day you shall have vengeance.'
         ],
         'gear': [
-            ['Communicator (III)', 'proximity sensor'],
-            ['Portable lab', 'computer'],
-            ['Exo shell', 'database'],
-            ['Pressure tent', 'medkit'],
-            ['Tools (Advanced)', 'compass']
+            ['Communicator (III)', 'Proximity sensor'],
+            ['Portable lab', 'Computer'],
+            ['Exo shell', 'Database'],
+            ['Pressure tent', 'Medkit'],
+            ['Tools (Advanced)', 'Compass']
         ]
     },
     'Ship Worker': {
@@ -321,8 +321,8 @@ var concepts = {
         ],
         'attribute': 'Strength',
         'reputation': -1,
-        'face': ['Tired eyes','sweaty face','lank hair','pursed lips'],
-        'clothing': ['Tattooed arms', 'tank top with a symbol', 'wide brim cap', 'leather jacket'],
+        'face': ['Tired eyes','Sweaty face','Lank hair','Pursed lips'],
+        'clothing': ['Tattooed arms', 'Tank top with a symbol', 'Wide brim cap', 'Leather jacket'],
         'talents': ['Exo Specialist', 'Tough', 'Zero-G Training'],
         'problems': [
             'You have a short fuse and are prone to fits of rage. This often gets you in trouble.',
@@ -330,11 +330,11 @@ var concepts = {
             'You have seen the Dark between the Stars, and now, space terrifies you. Sometimes you are able to conquer your fear.',
         ],
         'gear': [
-            ['Tools (Ordinary)', 'vacuum sealer'],
-            ['Power glove', 'environment scanner'],
-            ['Arrash', 'tabak'],
-            ['Exo loader', 'exo shell'],
-            ['Hyper rope', 'dura knife']
+            ['Tools (Ordinary)', 'Vacuum sealer'],
+            ['Power glove', 'Environment scanner'],
+            ['Arrash', 'Tabak'],
+            ['Exo loader', 'Exo shell'],
+            ['Hyper rope', 'Dura knife']
         ]
     },
     'Soldier': {
@@ -354,8 +354,8 @@ var concepts = {
         ],
         'attribute': 'Agility',
         'reputation': -1,
-        'face': ['Menacing stare','scarred','cybernetic eye','burn marks'],
-        'clothing': ['Fatigues', 'dress uniform', 'deep black djellaba', 'long leather coat'],
+        'face': ['Menacing stare','Scarred','Cybernetic eye','Burn marks'],
+        'clothing': ['Fatigues', 'Dress uniform', 'Deep black djellaba', 'Long leather coat'],
         'talents': ['Combat Veteran', 'Cybernetic Muscles (CYB)', 'Tough'],
         'problems': [
             'You are addicted to opor, and use it after doing things on the battlefield you would rather forget.',
@@ -363,11 +363,11 @@ var concepts = {
             'You are a coward, but try to hide it as best as you can.'
         ],
         'gear': [
-            ['Heavy armor', 'mercurium sword'],
-            ['Accelerator pistol with sensor scope', 'vulcan carbine'],
-            ['Frag grenade', 'cybernetic muscles (CYB)'],
-            ['Command unit', 'advanced scope'],
-            ['Communicator (II)', 'medkit']
+            ['Heavy armor', 'Mercurium sword'],
+            ['Accelerator pistol with sensor scope', 'Vulcan carbine'],
+            ['Frag grenade', 'Cybernetic muscles (CYB)'],
+            ['Command unit', 'Advanced scope'],
+            ['Communicator (II)', 'Medkit']
         ]
     },
     'Trailblazer': {
@@ -387,8 +387,8 @@ var concepts = {
         ],
         'attribute': 'Wits',
         'reputation': 0,
-        'face': ['Weather-beaten','squinting','protective goggles','bald'],
-        'clothing': ['Heavy overalls','crude boots','fur-lined coat','lined caftan'],
+        'face': ['Weather-beaten','Squinting','Protective goggles','Bald'],
+        'clothing': ['Heavy overalls','Crude boots','Fur-lined coat','Lined caftan'],
         'talents': ['Weatherproof (CYB)', 'Nine Lives', 'Rugged'],
         'problems': [
             'You are stubborn to a fault, never giving up, even if you or your friends will suffer negative consequences.',
@@ -396,11 +396,11 @@ var concepts = {
             'You are possessed by something from the Dark between the Stars. It sometimes takes over, giving you seizures or memory loss.'
         ],
         'gear': [
-            ['Recon drone', 'communicator (V)'],
-            ['Dura axe', 'vulcan carbine'],
-            ['5 m-doses', 'database'],
-            ['Weatherproof (CYB)', 'exo shell'],
-            ['Environment scanner', 'compass']
+            ['Recon drone', 'Communicator (V)'],
+            ['Dura axe', 'Vulcan carbine'],
+            ['5 m-doses', 'Database'],
+            ['Weatherproof (CYB)', 'Exo shell'],
+            ['Environment scanner', 'Compass']
         ]
     },
 }
