@@ -306,9 +306,9 @@ var concepts = {
     },
 }
 
-function generateCharacter() {
+function generateCharacter(background, concept) {
     // Background and upbringing
-    var background = getRandomElement(Object.keys(upbringings))
+    var background = background ? background : getRandomElement(Object.keys(upbringings))
     var upbringing = upbringings[background];
     var attributePoints = upbringing['attribute points'] - 4;
     var skillPoints = upbringing['skill points'];
@@ -317,7 +317,7 @@ function generateCharacter() {
     var origin = getRandomElement(origins);
 
     // Concept
-    var concept = getRandomElement(Object.keys(concepts));
+    var concept = concept ? concept : getRandomElement(Object.keys(concepts));
     var conceptDetails = concepts[concept];
     var conceptKeyAttribute = conceptDetails['attribute'];
     var subconcept = getRandomElement(Object.keys(conceptDetails['subconcepts']));
@@ -426,7 +426,20 @@ function generateCharacter() {
 }
 
 $('.generate-character').click(function() {
-    generateCharacter();
+    var background = '';
+    var concept = '';
+    if ($('.char-background').val() != 'Any Background') {
+        background = $('.char-background').val();
+    }
+    if ($('.char-concept').val() != 'Any Concept') {
+        concept = $('.char-concept').val();
+    }
+    generateCharacter(background, concept);
+});
+
+$('.reset-char-controls').click(function() {
+    $('.char-background').val('Any Background');
+    $('.char-concept').val('Any Concept')
 });
 
 $(document).ready(function() {
