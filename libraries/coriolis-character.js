@@ -41,20 +41,11 @@ var icons = [
 
 var concepts = {
     'Artist': {
-        'subconcepts': [
-            {
-                'subconcept': 'Courtesan',
-                'skills': ['Manipulation', 'Culture', 'Dexterity', 'Observation']
-            },
-            {
-                'subconcept': 'Musician',
-                'skills': ['Manipulation', 'Culture', 'Infiltration', 'Observation']
-            },
-            {
-                'subconcept': 'Poet',
-                'skills': ['Manipulation', 'Culture', 'Dexterity', 'Infiltration']
-            }
-        ],
+        'subconcepts': {
+            'Courtesan': {'skills': ['Manipulation', 'Culture', 'Dexterity', 'Observation']},
+            'Musician': {'skills': ['Manipulation', 'Culture', 'Infiltration', 'Observation']},
+            'Poet': {'skills': ['Manipulation', 'Culture', 'Dexterity', 'Infiltration']},
+        },
         'attribute': 'Empathy',
         'reputation': 1,
         'face': ['Flawless makeup','Bedroom eyes','Black curls','Animate tattoo'],
@@ -74,20 +65,11 @@ var concepts = {
         ]
     },
     'Data Spider': {
-        'subconcepts': [
-            {
-                'subconcept': 'Analyst',
-                'skills': ['Data Djinn','Culture','Manipulation','Science']
-            },
-            {
-                'subconcept': 'Correspondent',
-                'skills': ['Culture','Manipulation','Infiltration','Observation']
-            },
-            {
-                'subconcept': 'Data Djinn',
-                'skills': ['Data Djinn', 'Manipulation', 'Observation','Science']
-            }
-        ],
+        'subconcepts': {
+            'Analyst': {'skills': ['Data Djinn','Culture','Manipulation','Science']},
+            'Correspondent': {'skills': ['Culture','Manipulation','Infiltration','Observation']},
+            'Data Djinn': {'skills': ['Data Djinn', 'Manipulation', 'Observation','Science']},
+        },
         'attribute': 'Wits',
         'reputation': 0,
         'face': ['Flawless makeup', 'Curious eyes', 'Smirking face', 'Wrinkled forehead'],
@@ -107,20 +89,11 @@ var concepts = {
         ]
     },
     'Fugitive': {
-        'subconcepts': [
-            {
-                'subconcept': 'Criminal',
-                'skills': ['Force','Melee Combat','Dexterity','Infiltration']
-            },
-            {
-                'subconcept': 'Mystic',
-                'skills': ['Manipulation','Mystic Powers','Dexterity','Infiltration']
-            },
-            {
-                'subconcept': 'Revolutionary',
-                'skills': ['Ranged Combat','Dexterity','Observation', 'Survival']
-            }
-        ],
+        'subconcepts': {
+            'Criminal': {'skills': ['Force','Melee Combat','Dexterity','Infiltration']},
+            'Mystic': {'skills': ['Manipulation','Mystic Powers','Dexterity','Infiltration']},
+            'Revolutionary': {'skills': ['Ranged Combat','Dexterity','Observation', 'Survival']},
+        },
         'attribute': 'Empathy',
         'reputation': -2,
         'face': ['Blank stare','Facial tattoos','Lip ring','Shaved head'],
@@ -140,20 +113,11 @@ var concepts = {
         ]
     },
     'Negotiator': {
-        'subconcepts': [
-            {
-                'subconcept': 'Agitator',
-                'skills': ['Data Djinn','Force','Manipulation','Culture']
-            },
-            {
-                'subconcept': 'Diplomat',
-                'skills': ['Command', 'Culture', 'Manipulation', 'Melee Combat']
-            },
-            {
-                'subconcept': 'Peddler',
-                'skills': ['Culture','Manipulation','Observation','Pilot']
-            }
-        ],
+        'subconcepts': {
+            'Agitator': {'skills': ['Data Djinn','Force','Manipulation','Culture']},
+            'Diplomat': {'skills': ['Command', 'Culture', 'Manipulation', 'Melee Combat']},
+            'Peddler': {'skills': ['Culture','Manipulation','Observation','Pilot']},
+        },
         'attribute': 'Empathy',
         'reputation': 1,
         'face': ['Red face','Grave looking','Stubble','Too much makeup'],
@@ -173,20 +137,11 @@ var concepts = {
         ]
     },
     'Operative': {
-        'subconcepts': [
-            {
-                'subconcept': 'Assassin',
-                'skills': ['Infiltration','Dexterity','Melee Combat','Ranged Combat']
-            },
-            {
-                'subconcept': 'Guardsman/-woman',
-                'skills': ['Force', 'Melee Combat','Ranged Combat', 'Observation']
-            },
-            {
-                'subconcept': 'Spy',
-                'skills': ['Data Djinn','Manipulation','Infiltration','Ranged Combat']
-            }
-        ],
+        'subconcepts': {
+            'Assassin': {'skills': ['Infiltration','Dexterity','Melee Combat','Ranged Combat']},
+            'Guardsman/-woman': {'skills': ['Force', 'Melee Combat','Ranged Combat', 'Observation']},
+            'Spy': {'skills': ['Data Djinn','Manipulation','Infiltration','Ranged Combat']},
+        },
         'attribute': 'Agility',
         'reputation': 0,
         'face': ['Scarred face','Blank stare','Cold eyes','Crew cut'],
@@ -206,20 +161,11 @@ var concepts = {
         ]
     },
     'Pilot': {
-        'subconcepts': [
-            {
-                'subconcept': 'Driver',
-                'skills': ['Force','Pilot','Ranged Combat','Survival']
-            },
-            {
-                'subconcept': 'Fighter Pilot',
-                'skills': ['Data Djinn','Pilot','Ranged Combat','Technology']
-            },
-            {
-                'subconcept': 'Freighter Pilot',
-                'skills': ['Data Djinn', 'Force', 'Pilot','Technology']
-            }
-        ],
+        'subconcepts': {
+            'Driver': {'skills': ['Force','Pilot','Ranged Combat','Survival']},
+            'Fighter Pilot': {'skills': ['Data Djinn','Pilot','Ranged Combat','Technology']},
+            'Freighter Pilot': {'skills': ['Data Djinn', 'Force', 'Pilot','Technology']},
+        },
         'attribute': 'Agility',
         'reputation': 0,
         'face': ['Proud eyes','Chiseled features','Steely grey eyes','Unshaven'],
@@ -239,20 +185,11 @@ var concepts = {
         ]
     },
     'Preacher': {
-        'subconcepts': [
-            {
-                'subconcept': 'Ascetic',
-                'skills': ['Force','Culture','Dexterity','Science']
-            },
-            {
-                'subconcept': 'Missionary',
-                'skills': ['Culture','Manipulation','Dexterity','Survival']
-            },
-            {
-                'subconcept': 'Prophet',
-                'skills': ['Force','Culture','Manipulation','Observation']
-            }
-        ],
+        'subconcepts': {
+            'Ascetic': {'skills': ['Force','Culture','Dexterity','Science']},
+            'Missionary': {'skills': ['Culture','Manipulation','Dexterity','Survival']},
+            'Prophet': {'skills': ['Force','Culture','Manipulation','Observation']},
+        },
         'attribute': 'Empathy',
         'reputation': 1,
         'face': ['Mad eyes','Fiery speech','Frowning','Unruly hair'],
@@ -272,20 +209,11 @@ var concepts = {
         ]
     },
     'Scientist': {
-        'subconcepts': [
-            {
-                'subconcept': 'Archaeologist',
-                'skills': ['Culture','Observation','Science','Survival']
-            },
-            {
-                'subconcept': 'Medicurg',
-                'skills': ['Medicurgy','Manipulation','Observation','Science']
-            },
-            {
-                'subconcept': 'Technician',
-                'skills': ['Force','Technology','Observation','Science']
-            }
-        ],
+        'subconcepts': {
+            'Archaeologist': {'skills': ['Culture','Observation','Science','Survival']},
+            'Medicurg': {'skills': ['Medicurgy','Manipulation','Observation','Science']},
+            'Technician': {'skills': ['Force','Technology','Observation','Science']},
+        },
         'attribute': 'Wits',
         'reputation': 1,
         'face': ['Curious eyes','Smooth forehead','Dirty face','Hair bund'],
@@ -305,20 +233,11 @@ var concepts = {
         ]
     },
     'Ship Worker': {
-        'subconcepts': [
-            {
-                'subconcept': 'Deckhand',
-                'skills': ['Force','Manipulation','Dexterity','Culture']
-            },
-            {
-                'subconcept': 'Dock Worker',
-                'skills': ['Force', 'Melee Combat', 'Dexterity','Technology']
-            },
-            {
-                'subconcept': 'Engineer',
-                'skills': ['Data Djinn','Force','Observation','Technology']
-            }
-        ],
+        'subconcepts': {
+            'Deckhand': {'skills': ['Force','Manipulation','Dexterity','Culture']},
+            'Dock Worker': {'skills': ['Force', 'Melee Combat', 'Dexterity','Technology']},
+            'Engineer': {'skills': ['Data Djinn','Force','Observation','Technology']},
+        },
         'attribute': 'Strength',
         'reputation': -1,
         'face': ['Tired eyes','Sweaty face','Lank hair','Pursed lips'],
@@ -338,20 +257,11 @@ var concepts = {
         ]
     },
     'Soldier': {
-        'subconcepts': [
-            {
-                'subconcept': 'Legionnaire',
-                'skills': ['Force','Melee Combat','Ranged Combat', 'Survival']
-            },
-            {
-                'subconcept': 'Mercenary',
-                'skills': ['Melee Combat', 'Dexterity', 'Observation', 'Ranged Combat']
-            },
-            {
-                'subconcept': 'Officer',
-                'skills': ['Command','Culture','Melee Combat','Ranged Combat']
-            }
-        ],
+        'subconcepts': {
+            'Legionnaire': {'skills': ['Force','Melee Combat','Ranged Combat', 'Survival']},
+            'Mercenary': {'skills': ['Melee Combat', 'Dexterity', 'Observation', 'Ranged Combat']},
+            'Officer': {'skills': ['Command','Culture','Melee Combat','Ranged Combat']},
+        },
         'attribute': 'Agility',
         'reputation': -1,
         'face': ['Menacing stare','Scarred','Cybernetic eye','Burn marks'],
@@ -371,20 +281,11 @@ var concepts = {
         ]
     },
     'Trailblazer': {
-        'subconcepts': [
-            {
-                'subconcept': 'Colonist',
-                'skills': ['Force','Dexterity','Ranged Combat','Survival']
-            },
-            {
-                'subconcept': 'Prospector',
-                'skills': ['Pilot','Technology','Science','Survival']
-            },
-            {
-                'subconcept': 'Scout',
-                'skills': ['Infiltration', 'Ranged Combat', 'Observation','Survival']
-            }
-        ],
+        'subconcepts': {
+                'Colonist': {'skills': ['Force','Dexterity','Ranged Combat','Survival']},
+                'Prospector': {'skills': ['Pilot','Technology','Science','Survival']},
+                'Scout': {'skills': ['Infiltration', 'Ranged Combat', 'Observation','Survival']},
+        },
         'attribute': 'Wits',
         'reputation': 0,
         'face': ['Weather-beaten','Squinting','Protective goggles','Bald'],
@@ -418,10 +319,10 @@ function generateCharacter() {
     // Concept
     var concept = getRandomElement(Object.keys(concepts));
     var conceptDetails = concepts[concept];
-    var subconceptDetails = conceptDetails['subconcepts'][getRandomElement(Object.keys(conceptDetails['subconcepts']))];
-    var subconcept = subconceptDetails['subconcept'];
-    var subconceptSkills = subconceptDetails['skills'];
     var conceptKeyAttribute = conceptDetails['attribute'];
+    var subconcept = getRandomElement(Object.keys(conceptDetails['subconcepts']));
+    var subconceptDetails = conceptDetails['subconcepts'][subconcept];
+    var subconceptSkills = subconceptDetails['skills'];
 
     // Features
     var face = getRandomElement(conceptDetails['face']);
