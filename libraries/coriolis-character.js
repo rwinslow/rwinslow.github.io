@@ -425,6 +425,7 @@ function generateCharacter(background, concept, subconcept) {
     $('.character .skills .fill').html(skillsOut.join('\n'));
 }
 
+// Generate character event
 $('.generate-character').click(function() {
     var background = '';
     var concept = '';
@@ -441,8 +442,8 @@ $('.generate-character').click(function() {
     generateCharacter(background, concept, subconcept);
 });
 
-// Update subconcepts on concept change
-$('.char-concept').change(function() {
+// Function to handle updating subconcepts based on concept selection
+function updateSubconcepts() {
     var concept = $('.char-concept').val();
     if (concept != 'Any Concept') {
         var subconcepts = Object.keys(concepts[concept]['subconcepts']);
@@ -457,7 +458,10 @@ $('.char-concept').change(function() {
             $("<option></option>").text(option)
         );
     }
-});
+}
+
+// Update subconcepts on concept change
+$('.char-concept').change(updateSubconcepts);
 
 // Reset controls
 $('.reset-char-controls').click(function() {
@@ -470,5 +474,6 @@ $('.reset-char-controls').click(function() {
 
 // Always generate a random character
 $(document).ready(function() {
+    updateSubconcepts();
     generateCharacter();
 })
