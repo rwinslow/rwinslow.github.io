@@ -306,7 +306,7 @@ var concepts = {
     },
 }
 
-function generateCharacter(background, concept) {
+function generateCharacter(background, concept, subconcept) {
     // Background and upbringing
     var background = background ? background : getRandomElement(Object.keys(upbringings))
     var upbringing = upbringings[background];
@@ -320,7 +320,7 @@ function generateCharacter(background, concept) {
     var concept = concept ? concept : getRandomElement(Object.keys(concepts));
     var conceptDetails = concepts[concept];
     var conceptKeyAttribute = conceptDetails['attribute'];
-    var subconcept = getRandomElement(Object.keys(conceptDetails['subconcepts']));
+    var subconcept = subconcept ? subconcept : getRandomElement(Object.keys(conceptDetails['subconcepts']));
     var subconceptDetails = conceptDetails['subconcepts'][subconcept];
     var subconceptSkills = subconceptDetails['skills'];
 
@@ -428,20 +428,47 @@ function generateCharacter(background, concept) {
 $('.generate-character').click(function() {
     var background = '';
     var concept = '';
+    var subconcept = '';
     if ($('.char-background').val() != 'Any Background') {
         background = $('.char-background').val();
     }
     if ($('.char-concept').val() != 'Any Concept') {
         concept = $('.char-concept').val();
     }
-    generateCharacter(background, concept);
+    if ($('.char-subconcept').val() != 'Any Subconcept') {
+        subconcept = $('.char-subconcept').val();
+    }
+    generateCharacter(background, concept, subconcept);
 });
 
+// Update subconcepts on concept change
+$('.char-concept').change(function() {
+    var concept = $('.char-concept').val();
+    if (concept != 'Any Concept') {
+        var subconcepts = Object.keys(concepts[concept]['subconcepts']);
+        var options = ['Any Subconcept'].concat(subconcepts);
+    } else {
+        var options = ['Any Subconcept'];
+    }
+    $('.char-subconcept').empty();
+    for (let i = 0; i < options.length; i++) {
+        const option = options[i];
+        $('.char-subconcept').append(
+            $("<option></option>").text(option)
+        );
+    }
+});
+
+// Reset controls
 $('.reset-char-controls').click(function() {
     $('.char-background').val('Any Background');
-    $('.char-concept').val('Any Concept')
+    $('.char-concept').val('Any Concept');
+    $('.char-subconcept').empty().append(
+        $("<option></option>").text('Any Subconcept')
+    );
 });
 
+// Always generate a random character
 $(document).ready(function() {
     generateCharacter();
 })
