@@ -306,7 +306,7 @@ var concepts = {
     },
 }
 
-function generateCharacter(background, concept, subconcept) {
+function coriolisGenerateCharacter(background, concept, subconcept) {
     // Background and upbringing
     var background = background ? background : getRandomElement(Object.keys(upbringings))
     var upbringing = upbringings[background];
@@ -406,74 +406,95 @@ function generateCharacter(background, concept, subconcept) {
     }
 
     // Fill page
-    $('.character .background .fill').html(background);
-    $('.character .concept .fill').html(concept);
-    $('.character .subconcept .fill').html(subconcept);
-    $('.character .strength .fill').html(attributes['Strength']);
-    $('.character .agility .fill').html(attributes['Agility']);
-    $('.character .wits .fill').html(attributes['Wits']);
-    $('.character .empathy .fill').html(attributes['Empathy']);
-    $('.character .face .fill').html(face);
-    $('.character .clothing .fill').html(clothing);
-    $('.character .talent .fill').html(talent);
-    $('.character .icon .fill').html(icon);
-    $('.character .problem .fill').html(problem);
-    $('.character .reputation .fill').html(reputation);
-    $('.character .birr .fill').html(birr);
-    $('.character .origin .fill').html(origin);
-    $('.character .gear .fill').html(gearOut.join(''));
-    $('.character .skills .fill').html(skillsOut.join('\n'));
+    $('.coriolis-character .background .fill').html(background);
+    $('.coriolis-character .concept .fill').html(concept);
+    $('.coriolis-character .subconcept .fill').html(subconcept);
+    $('.coriolis-character .strength .fill').html(attributes['Strength']);
+    $('.coriolis-character .agility .fill').html(attributes['Agility']);
+    $('.coriolis-character .wits .fill').html(attributes['Wits']);
+    $('.coriolis-character .empathy .fill').html(attributes['Empathy']);
+    $('.coriolis-character .face .fill').html(face);
+    $('.coriolis-character .clothing .fill').html(clothing);
+    $('.coriolis-character .talent .fill').html(talent);
+    $('.coriolis-character .icon .fill').html(icon);
+    $('.coriolis-character .problem .fill').html(problem);
+    $('.coriolis-character .reputation .fill').html(reputation);
+    $('.coriolis-character .birr .fill').html(birr);
+    $('.coriolis-character .origin .fill').html(origin);
+    $('.coriolis-character .gear .fill').html(gearOut.join(''));
+    $('.coriolis-character .skills .fill').html(skillsOut.join('\n'));
 }
 
 // Generate character event
-$('.generate-character').click(function() {
+$('.coriolis-generate-character').click(function() {
     var background = '';
     var concept = '';
     var subconcept = '';
-    if ($('.char-background').val() != 'Any Background') {
-        background = $('.char-background').val();
+    if ($('.coriolis-background').val() != 'Any Background') {
+        background = $('.coriolis-background').val();
     }
-    if ($('.char-concept').val() != 'Any Concept') {
-        concept = $('.char-concept').val();
+    if ($('.coriolis-concept').val() != 'Any Concept') {
+        concept = $('.coriolis-concept').val();
     }
-    if ($('.char-subconcept').val() != 'Any Subconcept') {
-        subconcept = $('.char-subconcept').val();
+    if ($('.coriolis-subconcept').val() != 'Any Subconcept') {
+        subconcept = $('.coriolis-subconcept').val();
     }
-    generateCharacter(background, concept, subconcept);
+    coriolisGenerateCharacter(background, concept, subconcept);
 });
 
+function coriolisFillControls() {
+    $('.coriolis-background').empty();
+    var backgroundOptions = ['Any Background'].concat(Object.keys(upbringings));
+    for (let i = 0; i < backgroundOptions.length; i++) {
+        const background = backgroundOptions[i];
+        $('.coriolis-background').append(
+            $("<option></option>").text(background)
+        );
+    }
+
+    $('.coriolis-concept').empty();
+    var conceptOptions = ['Any Concept'].concat(Object.keys(concepts));
+    for (let i = 0; i < conceptOptions.length; i++) {
+        const concept = conceptOptions[i];
+        $('.coriolis-concept').append(
+            $("<option></option>").text(concept)
+        );
+    }
+}
+
 // Function to handle updating subconcepts based on concept selection
-function updateSubconcepts() {
-    var concept = $('.char-concept').val();
+function coriolisUpdateSubconcepts() {
+    var concept = $('.coriolis-concept').val();
     if (concept != 'Any Concept') {
         var subconcepts = Object.keys(concepts[concept]['subconcepts']);
         var options = ['Any Subconcept'].concat(subconcepts);
     } else {
         var options = ['Any Subconcept'];
     }
-    $('.char-subconcept').empty();
+    $('.coriolis-subconcept').empty();
     for (let i = 0; i < options.length; i++) {
         const option = options[i];
-        $('.char-subconcept').append(
+        $('.coriolis-subconcept').append(
             $("<option></option>").text(option)
         );
     }
 }
 
 // Update subconcepts on concept change
-$('.char-concept').change(updateSubconcepts);
+$('.coriolis-concept').change(coriolisUpdateSubconcepts);
 
 // Reset controls
-$('.reset-char-controls').click(function() {
-    $('.char-background').val('Any Background');
-    $('.char-concept').val('Any Concept');
-    $('.char-subconcept').empty().append(
+$('.reset-coriolis-controls').click(function() {
+    $('.coriolis-background').val('Any Background');
+    $('.coriolis-concept').val('Any Concept');
+    $('.coriolis-subconcept').empty().append(
         $("<option></option>").text('Any Subconcept')
     );
 });
 
 // Always generate a random character
 $(document).ready(function() {
-    updateSubconcepts();
-    generateCharacter();
+    coriolisFillControls();
+    coriolisUpdateSubconcepts();
+    coriolisGenerateCharacter();
 })
