@@ -129,10 +129,10 @@ var concepts = {
             'You are greedy, and you just have to scam people if you get the chance, even your friends.'
         ],
         'gear': [
-            ['Tabula', 'Language modulator (CYB)'],
+            ['Tabula', 'Language Modulator (CYB)'],
             ['Com link V', 'Voice amplifier'],
             ['Exquisite clothing', 'Kambra (D6 doses)'],
-            ['Lie detector (CYB)', 'Language unit'],
+            ['Lie Detector (CYB)', 'Language unit'],
             ['Vulcan cricket', 'Mercurium dagger']
         ]
     },
@@ -179,7 +179,7 @@ var concepts = {
         'gear': [
             ['Tools (Ordinary)', 'Talisman (Pilot +1)'],
             ['Exo shell', 'Hand jet'],
-            ['Targeting Scope', 'Communicator (IV) (CYB)'],
+            ['Targeting Scope (CYB)', 'Communicator (IV)'],
             ['Accelerator pistol', 'Stun weapon'],
             ['Flight suit', 'Exquisite clothing']
         ]
@@ -275,7 +275,7 @@ var concepts = {
         'gear': [
             ['Heavy armor', 'Mercurium sword'],
             ['Accelerator pistol with sensor scope', 'Vulcan carbine'],
-            ['Frag grenade', 'Cybernetic muscles (CYB)'],
+            ['Frag grenade', 'Cybernetic Muscles (CYB)'],
             ['Command unit', 'Advanced scope'],
             ['Communicator (II)', 'Medkit']
         ]
@@ -398,7 +398,13 @@ function coriolisGenerateCharacter(background, concept, subconcept) {
     // Set gear
     for (let i = 0; i < conceptDetails['gear'].length; i++) {
         const gearOptions = conceptDetails['gear'][i];
-        gear[i] = getRandomElement(gearOptions);
+        if (gearOptions.includes(talent)) {
+            // Ensure cybernetic gear chosen if character has matching talent
+            gear[i] = talent;
+        } else {
+            // Randomly choose from only non-cybernetic gear
+            gear[i] = getRandomElement(coriolisNonCybGear(gearOptions));
+        }
     }
     var gearOut = [];
     for (let i = 0; i < gear.length; i++) {
@@ -441,6 +447,17 @@ $('.coriolis-generate-character').click(function() {
     }
     coriolisGenerateCharacter(background, concept, subconcept);
 });
+
+function coriolisNonCybGear(gearOptions) {
+    let nonCybGear = [];
+    for (let i = 0; i < gearOptions.length; i++) {
+        const gear = gearOptions[i];
+        if (!gear.includes('CYB')) {
+            nonCybGear.push(gear);
+        }
+    }
+    return nonCybGear;
+}
 
 function coriolisFillControls() {
     $('.coriolis-background').empty();
