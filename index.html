@@ -43,6 +43,9 @@
                     <a href="#coriolis-character">Coriolis Character</a>
                 </li>
                 <li class="toggle">
+                    <a href="#coriolis-critical-damage">Coriolis Critical Damage</a>
+                </li>
+                <li class="toggle">
                     <a href="#tftl-character">TFTL Character</a>
                 </li>
             </ul>
@@ -158,6 +161,59 @@
                 </div>
                 <!-- /Coriolis Character -->
 
+                <!-- Coriolis Critical Damage -->
+                <div class="coriolis-critical-damage">
+                    <div class="row mb-4">
+                        <div class="col-lg-4"><button class="btn btn-primary coriolis-generate-critical-damage">Generate Random Critical Damage</button></div>
+                        <div class="form-control col-lg-3 coriolis-critical-damage-random"><strong>Critical Damage</strong> <span class="fill">00</span></div>
+                    </div>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr><th scope="col">D66</th><th scope="col" class="col-lg-2">INJURY</th><th scope="col" class="col-lg-1">FATAL</th><th scope="col" class="col-lg-2">TIME LIMIT</th><th scope="col">EFFECT</th><th scope="col" class="col-lg-2">HEAL TIME</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">11</th><td>Wind Knocked Out</td><td>No</td><td>-</td><td>Stunned for one turn.</td><td>-</td></tr>
+                            <tr><th scope="row">12</th><td>Disorientated</td><td>No</td><td>-</td><td>Stunned for one turn.</td><td>-</td></tr>
+                            <tr><th scope="row">13</th><td>Sprained Wrist</td><td>No</td><td>-</td><td>Drops held item, then -1 to RANGED COMBAT and MELEE COMBAT.</td><td>D6</td></tr>
+                            <tr><th scope="row">14</th><td>Sprained Ankle</td><td>No</td><td>-</td><td>Falls down, then -1 to DEXTERITY and INFILTRATION.</td><td>D6</td></tr>
+                            <tr><th scope="row">15</th><td>Concussion</td><td>No</td><td>-</td><td>Stunned for one turn, then -1 to all advanced skills.</td><td>D6</td></tr>
+                            <tr><th scope="row">16</th><td>Bruised Lower Leg</td><td>No</td><td>-</td><td>Falls down, then -1 to DEXTERITY and INFILTRATION.</td><td>2D6</td></tr>
+                            <tr><th scope="row">21</th><td>Broken Nose</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to MANIPULATION.</td><td>D6</td></tr>
+                            <tr><th scope="row">22</th><td>Broken Fingers</td><td>No</td><td>-</td><td>Drops held item, then -2 to RANGED COMBAT and MELEE COMBAT.</td><td>2D6</td></tr>
+                            <tr><th scope="row">23</th><td>Broken Toes</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to DEXTERITY and INFILTRATION.</td><td>2D6</td></tr>
+                            <tr><th scope="row">24</th><td>Teeth Knocked Out</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to MANIPULATION.</td><td>2D6</td></tr>
+                            <tr><th scope="row">25</th><td>Groin Hit</td><td>No</td><td>-</td><td>Stunned for two turns, then 1 point of damage per FORCE, DEXTERITY, and MELEE COMBAT test.</td><td>2D6</td></tr>
+                            <tr><th scope="row">26</th><td>Dislocated Shoulder</td><td>No</td><td>-</td><td>Stunned for one turn, then -3 to FORCE and MELEE COMBAT.</td><td>D6</td></tr>
+                            <tr><th scope="row">31</th><td>Broken Ribs</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to DEXTERITY and MELEE COMBAT.</td><td>2D6</td></tr>
+                            <tr><th scope="row">32</th><td>Broken Arm</td><td>No</td><td>-</td><td>Stunned for one turn, then -3 to RANGED COMBAT and MELEE COMBAT.</td><td>3D6</td></tr>
+                            <tr><th scope="row">33</th><td>Broken Leg</td><td>No</td><td>-</td><td>Falls down, then Movement Rate halved, and -2 to DEXTERITY and INFILTRATION.</td><td>3D6</td></tr>
+                            <tr><th scope="row">34</th><td>Shredded Ear</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to OBSERVATION. Permanent ugly scar.</td><td>3D6</td></tr>
+                            <tr><th scope="row">35</th><td>Gouged Eye</td><td>No</td><td>-</td><td>Stunned for one turn, then -2 to RANGED COMBAT and OBSERVATION.</td><td>3D6</td></tr>
+                            <tr><th scope="row">36</th><td>Punctured Lung</td><td>Yes</td><td>D6 days</td><td>Stunned for one turn, then -3 to DEXTERITY.</td><td>2D6</td></tr>
+                            <tr><th scope="row">41</th><td>Lacerated Kidney</td><td>Yes</td><td>D6 days</td><td>Stunned for two turns, then 1 point of damage per FORCE, DEXTERITY, or MELEE COMBAT test.</td><td>3D6</td></tr>
+                            <tr><th scope="row">42</th><td>Crushed Foot</td><td>Yes</td><td>D6 days</td><td>Falls over, then Movement Rate halved, and -3 to DEXTERITY and INFILTRATION.</td><td>4D6</td></tr>
+                            <tr><th scope="row">43</th><td>Crushed Elbow</td><td>Yes</td><td>D6 days</td><td>Stunned for one turn, then -2 to FORCE and MELEE COMBAT. No use of two-handed weapons.</td><td>4D6</td></tr>
+                            <tr><th scope="row">44</th><td>Crushed Knee</td><td>Yes</td><td>D6 hours</td><td>Stunned for one turn, falls over, then Movement Rate halved, and -3 to DEXTERITY and INFILTRATION.</td><td>4D6</td></tr>
+                            <tr><th scope="row">45</th><td>Crushed Face</td><td>Yes</td><td>D6 hours</td><td>Unconscious D6 hours, then -2 to MANIPULATION.</td><td>4D6</td></tr>
+                            <tr><th scope="row">46</th><td>Pierced Intestines</td><td>Yes</td><td>D6 hours</td><td>Stunned for one turn, then 1 point of damage per hour until first aid is administered.</td><td>2D6</td></tr>
+                            <tr><th scope="row">51</th><td>Broken Spine</td><td>Yes</td><td>D6 hours</td><td>Unconscious D6 hours, then paralyzed from the waist down. Unless medical aid is given during the healing time, the paralysis is permanent.</td><td>4D6</td></tr>
+                            <tr><th scope="row">52</th><td>Broken Neck</td><td>Yes</td><td>D6 hours</td><td>Unconscious D6 hours, then paralyzed from the neck down. Unless medical aid is given during the healing time, the paralysis is permanent.</td><td>4D6</td></tr>
+                            <tr><th scope="row">53</th><td>Bleeding Gut</td><td>Yes</td><td>D6 minutes</td><td>1 point of damage per turn until first aid is given.</td><td>D6</td></tr>
+                            <tr><th scope="row">54</th><td>Internal Bleeding</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then 1 point of damage per FORCE, DEXTERITY, or MELEE COMBAT test.</td><td>2D6</td></tr>
+                            <tr><th scope="row">55</th><td>Severed Artery (Arm)</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -1 to DEXTERITY.</td><td>D6</td></tr>
+                            <tr><th scope="row">56</th><td>Severed Artery (Leg)</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -2 to DEXTERITY.</td><td>D6</td></tr>
+                            <tr><th scope="row">61</th><td>Destroyed Arm</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -2 to DEXTERITY. The arm is permanently lost. No use of two-handed weapons.</td><td>3D6</td></tr>
+                            <tr><th scope="row">62</th><td>Destroyed Leg</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -2 to DEXTERITY. The leg is permanently lost. Movement Rate is halved.</td><td>3D6</td></tr>
+                            <tr><th scope="row">63</th><td>Severed Jugular</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -1 to DEXTERITY.</td><td>D6</td></tr>
+                            <tr><th scope="row">64</th><td>Severed Aorta</td><td>Yes, -1</td><td>D6 minutes</td><td>Unconscious D6 hours, then -2 to DEXTERITY.</td><td>2D6</td></tr>
+                            <tr><th scope="row">65</th><td>Pierced Heart</td><td>Yes</td><td>-</td><td>Your heart beats one final time. Create a new PC.</td><td>-</td></tr>
+                            <tr><th scope="row">66</th><td>Crushed Skull</td><td>Yes</td><td>-</td><td>You are instantly killed. Your adventure ends here. Create a new PC.</td><td>-</td></tr>
+                            <tr><th scope="row">-</th><td>Atypical Damage</td><td>Yes</td><td>Varies</td><td>Unconscious until death, or until first aid is given.</td><td>-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /Coriolis Critical Damage -->
+
                 <!-- Tales from the Loop Character -->
                 <div class="tftl-character">
                     <div class="row mb-3">
@@ -220,6 +276,7 @@
     <!-- Coriolis JS -->
     <script src="libraries/coriolis-npc.js"></script>
     <script src="libraries/coriolis-character.js"></script>
+    <script src="libraries/coriolis-critical-damage.js"></script>
     <script src="libraries/tftl-character.js"></script>
 
 </body>
