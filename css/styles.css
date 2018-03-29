@@ -2,6 +2,10 @@
     display: none;
 }
 
+.table-sm-text {
+    font-size: .8em;
+}
+
 .first {
     display: block;
 }
