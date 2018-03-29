@@ -2,6 +2,17 @@
     display: none;
 }
 
+.w-1 { width: 1em; }
+.w-2 { width: 2em; }
+.w-3 { width: 3em; }
+.w-4 { width: 4em; }
+.w-5 { width: 5em; }
+.w-6 { width: 6em; }
+.w-7 { width: 7em; }
+.w-8 { width: 8em; }
+.w-9 { width: 9em; }
+.w-10 { width: 10em; }
+
 .table-sm-text {
     font-size: .8em;
 }
