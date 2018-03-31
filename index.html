@@ -22,9 +22,6 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/print.css" media="print" rel="stylesheet">
 
-    <!-- Coriolis Styles -->
-    <link href="css/coriolis-styles.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -71,33 +68,48 @@
 
                 <!-- Coriolis NPC Generator -->
                 <div class="coriolis-npcs">
-                    <div class="row mb-3 col-lg-12">
-                        <button type="button" class="btn btn-primary col-lg-12 generate-npcs">Generate NPCs</button>
+                    <div class="row mb-4 col-lg-12">
+                        <button type="button" class="btn btn-primary generate-npcs">Generate NPCs</button>
                     </div>
-                    <div class="row mb-3 col-lg-12">
-                        <div class="npcs autocols-2"></div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <table class="table table-sm">
+                                <thead class="thead-dark">
+                                    <tr><th class="col-lg-4">Name</th><th>Characteristics</th></tr>
+                                </thead>
+                                <tbody class="npcs-left">
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-lg-6">
+                            <table class="table table-sm">
+                                <thead class="thead-dark">
+                                    <tr><th class="col-lg-4">Name</th><th>Characteristics</th></tr>
+                                </thead>
+                                <tbody class="npcs-right">
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="row col-lg-12">
-                        <table class="table table-sm text-center table-hover">
-                            <thead class="thead-dark">
-                                <tr><th class="text-left" colspan="7">Common NPC Stats</th></tr>
-                                <tr><th class="text-left" scope="col">NPC</th><th scope="col">STR</th><th scope="col">AGI</th><th scope="col">WITS</th><th scope="col">EMP</th><th scope="col">REP</th><th class="text-left" scope="col">SKILLS</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><th class="text-left" scope="row">Agent</th><td>2</td><td>4</td><td>3</td><td>4</td><td>4</td><td class="text-left">Manipulation 3, Observation 2, Ranged Combat 1</td></tr>
-                                <tr><th class="text-left" scope="row">Artist</th><td>2</td><td>3</td><td>2</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Dexterity 2, Culture 1</td></tr>
-                                <tr><th class="text-left" scope="row">Data Spider</th><td>2</td><td>3</td><td>5</td><td>3</td><td>4</td><td class="text-left">Data Djinn 3, Manipulation 2, Culture 1</td></tr>
-                                <tr><th class="text-left" scope="row">Fugitive</th><td>3</td><td>4</td><td>2</td><td>4</td><td>2</td><td class="text-left">Mystic Powers 3, Infiltration 2, Melee Combat 1</td></tr>
-                                <tr><th class="text-left" scope="row">Negotiator</th><td>2</td><td>2</td><td>4</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Command 1</td></tr>
-                                <tr><th class="text-left" scope="row">Pilot</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Pilot 3, Data Djinn 2, Technology 1</td></tr>
-                                <tr><th class="text-left" scope="row">Preacher</th><td>2</td><td>2</td><td>4</td><td>4</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Survival 1</td></tr>
-                                <tr><th class="text-left" scope="row">Scientist</th><td>2</td><td>3</td><td>5</td><td>3</td><td>5</td><td class="text-left">Science 3, Technology 2, Observation 1</td></tr>
-                                <tr><th class="text-left" scope="row">Ship Worker</th><td>5</td><td>3</td><td>3</td><td>3</td><td>3</td><td class="text-left">Force 3, Dexterity 2, Melee Combat 1</td></tr>
-                                <tr><th class="text-left" scope="row">Soldier</th><td>3</td><td>5</td><td>2</td><td>2</td><td>3</td><td class="text-left">Ranged combat 3, Melee Combat 2, Command 1</td></tr>
-                                <tr><th class="text-left" scope="row">Trailblazer</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Survival 3, Observation 2, Dexterity 1</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="table table-sm text-center table-hover">
+                        <thead class="thead-dark">
+                            <tr><th class="text-left" colspan="7">Common NPC Stats</th></tr>
+                            <tr><th class="text-left" scope="col">NPC</th><th scope="col">STR</th><th scope="col">AGI</th><th scope="col">WITS</th><th scope="col">EMP</th><th scope="col">REP</th><th class="text-left" scope="col">SKILLS</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th class="text-left" scope="row">Agent</th><td>2</td><td>4</td><td>3</td><td>4</td><td>4</td><td class="text-left">Manipulation 3, Observation 2, Ranged Combat 1</td></tr>
+                            <tr><th class="text-left" scope="row">Artist</th><td>2</td><td>3</td><td>2</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Dexterity 2, Culture 1</td></tr>
+                            <tr><th class="text-left" scope="row">Data Spider</th><td>2</td><td>3</td><td>5</td><td>3</td><td>4</td><td class="text-left">Data Djinn 3, Manipulation 2, Culture 1</td></tr>
+                            <tr><th class="text-left" scope="row">Fugitive</th><td>3</td><td>4</td><td>2</td><td>4</td><td>2</td><td class="text-left">Mystic Powers 3, Infiltration 2, Melee Combat 1</td></tr>
+                            <tr><th class="text-left" scope="row">Negotiator</th><td>2</td><td>2</td><td>4</td><td>5</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Command 1</td></tr>
+                            <tr><th class="text-left" scope="row">Pilot</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Pilot 3, Data Djinn 2, Technology 1</td></tr>
+                            <tr><th class="text-left" scope="row">Preacher</th><td>2</td><td>2</td><td>4</td><td>4</td><td>5</td><td class="text-left">Manipulation 3, Culture 2, Survival 1</td></tr>
+                            <tr><th class="text-left" scope="row">Scientist</th><td>2</td><td>3</td><td>5</td><td>3</td><td>5</td><td class="text-left">Science 3, Technology 2, Observation 1</td></tr>
+                            <tr><th class="text-left" scope="row">Ship Worker</th><td>5</td><td>3</td><td>3</td><td>3</td><td>3</td><td class="text-left">Force 3, Dexterity 2, Melee Combat 1</td></tr>
+                            <tr><th class="text-left" scope="row">Soldier</th><td>3</td><td>5</td><td>2</td><td>2</td><td>3</td><td class="text-left">Ranged combat 3, Melee Combat 2, Command 1</td></tr>
+                            <tr><th class="text-left" scope="row">Trailblazer</th><td>3</td><td>4</td><td>4</td><td>2</td><td>4</td><td class="text-left">Survival 3, Observation 2, Dexterity 1</td></tr>
+                        </tbody>
+                    </table>
                     <div class="row col-lg-12 d-block">
                         Thanks to <a href="http://www.bdancer.com/med-guide/names/">BDancer</a> for additional first names and <a href="https://www.familyeducation.com/baby-names/browse-origin/surname/arabic">Family Education</a> for additional last names.
                     </div>
@@ -106,67 +118,65 @@
 
                 <!-- Coriolis Character -->
                 <div class="coriolis-character">
-                    <div class="row mb-3 col-lg-12">
-                        <button type="button" class="btn btn-primary btn-block coriolis-generate-character">Generate Character</button>
-                    </div>
-                    <div class="form-group row col-lg-12">
-                        <div class="col-lg-3 mb-3">
+                    <div class="row mb-4">
+                        <div class="btn-toolbar col-lg-3" role="toolbar" aria-label="Generate Coriolis Character">
+                            <div class="btn-group mb-2 mr-2" role="group" aria-label="Dice pool">
+                                <button type="button" class="btn btn-primary col-lg coriolis-generate-character">Generate Character</button>
+                                <button class="btn btn-warning btn-block reset-coriolis-controls">Reset</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mb-2">
                             <select class="form-control form-control-sm coriolis-background" name="coriolis-background">
                                 <option>Any Background</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 mb-3">
+                        <div class="col-lg-3 mb-2">
                             <select class="form-control form-control-sm coriolis-concept" name="coriolis-concept">
                                 <option>Any Concept</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 mb-3">
+                        <div class="col-lg-3 mb-2">
                             <select class="form-control form-control-sm coriolis-subconcept" name="coriolis-subconcept">
                                 <option>Any Subconcept</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 mb-3">
-                            <button class="btn btn-warning btn-block reset-coriolis-controls">Reset Controls</button>
-                        </div>
                     </div>
-                    <div class="row mb-3 col-lg-12">
-                        <div class="coriolis-character">
-                            <div class="row">
-                                <div class="col-lg-3 mb-4 pull-left">
-                                    <div class="background"><strong>Background</strong> <span class="fill"></span></div>
-                                    <div class="concept"><strong>Concept</strong> <span class="fill"></span></div>
-                                    <div class="subconcept"><strong>Subconcept</strong> <span class="fill"></span></div>
-                                    <div class="origin"><strong>Origin</strong> <span class="fill"></span></div>
-                                </div>
-                                <div class="col-lg-3 mb-4 pull-left">
-                                    <div class="face"><strong>Face</strong> <span class="fill"></span></div>
-                                    <div class="clothing"><strong>Clothing</strong> <span class="fill"></span></div>
-                                    <div class="birr"><strong>Birr</strong> <span class="fill"></span></div>
-                                    <div class="reputation"><strong>Reputation</strong> <span class="fill"></span></div>
-                                </div>
-                                <div class="col-lg-6 mb-4 pull-left">
-                                    <div class="icon"><strong>Icon</strong> <span class="fill"></span></div>
-                                    <div class="talent"><strong>Talent</strong> <span class="fill"></span></div>
-                                    <div class="problem"><strong>Problem</strong> <span class="fill"></span></div>
-                                </div>
+                    <div class="row mb-3">
+                        <div class="row col-lg-12">
+                            <div class="col-lg-3 mb-4 pull-left">
+                                <div class="background"><strong>Background</strong> <span class="fill"></span></div>
+                                <div class="concept"><strong>Concept</strong> <span class="fill"></span></div>
+                                <div class="subconcept"><strong>Subconcept</strong> <span class="fill"></span></div>
+                                <div class="origin"><strong>Origin</strong> <span class="fill"></span></div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-3 mb-4 pull-left attributes">
-                                    <div class="border-bottom pb-2 mb-2"><strong>Attributes</strong></div>
-                                    <div class="strength">Strength <span class="fill"></span></div>
-                                    <div class="agility">Agility <span class="fill"></span></div>
-                                    <div class="wits">Wits <span class="fill"></span></div>
-                                    <div class="empathy">Empathy <span class="fill"></span></div>
-                                </div>
-                                <div class="col-lg-6 mb-4 pull-left skills">
-                                    <div class="border-bottom pb-2 mb-2"><strong>Skills</strong></div>
-                                    <div class="autocols-2 fill"></div>
-                                </div>
-                                <div class="col-lg-3 mb-4 pull-left">
-                                    <div class="gear">
-                                        <div class="border-bottom pb-2 mb-2"><strong>Gear</strong></div>
-                                        <div class="fill"></div>
-                                    </div>
+                            <div class="col-lg-3 mb-4 pull-left">
+                                <div class="face"><strong>Face</strong> <span class="fill"></span></div>
+                                <div class="clothing"><strong>Clothing</strong> <span class="fill"></span></div>
+                                <div class="birr"><strong>Birr</strong> <span class="fill"></span></div>
+                                <div class="reputation"><strong>Reputation</strong> <span class="fill"></span></div>
+                            </div>
+                            <div class="col-lg-6 mb-4 pull-left">
+                                <div class="icon"><strong>Icon</strong> <span class="fill"></span></div>
+                                <div class="talent"><strong>Talent</strong> <span class="fill"></span></div>
+                                <div class="problem"><strong>Problem</strong> <span class="fill"></span></div>
+                            </div>
+                        </div>
+                        <div class="row col-lg-12">
+                            <div class="col-lg-3 mb-4 pull-left attributes">
+                                <div class="border-bottom pb-2 mb-2"><strong>Attributes</strong></div>
+                                <div class="strength">Strength <span class="fill"></span></div>
+                                <div class="agility">Agility <span class="fill"></span></div>
+                                <div class="wits">Wits <span class="fill"></span></div>
+                                <div class="empathy">Empathy <span class="fill"></span></div>
+                            </div>
+                            <div class="col-lg-6 mb-4 pull-left skills">
+                                <div class="border-bottom pb-2 mb-2"><strong>Skills</strong></div>
+                                <div class="autocols-2 fill"></div>
+                            </div>
+                            <div class="col-lg-3 mb-4 pull-left">
+                                <div class="gear">
+                                    <div class="border-bottom pb-2 mb-2"><strong>Gear</strong></div>
+                                    <div class="fill"></div>
                                 </div>
                             </div>
                         </div>
@@ -471,44 +481,53 @@
 
                 <!-- Tales from the Loop Character -->
                 <div class="tftl-character">
-                    <div class="row mb-3 col-lg-12">
-                        <button type="button" class="btn btn-primary btn-block tftl-generate-character">Generate Character</button>
-                    </div>
-                    <div class="form-group row col-lg-12">
-                        <div class="col-lg-3 mb-3">
+                    <div class="row mb-4">
+                        <div class="btn-toolbar col-lg-3" role="toolbar" aria-label="Generate Tales from the Loop Character">
+                            <div class="btn-group mb-2 mr-2" role="group" aria-label="Generate buttons">
+                                <button type="button" class="btn btn-primary col-lg tftl-generate-character">Generate Character</button>
+                                <button class="btn btn-warning btn-block reset-tftl-controls">Reset</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
                             <select class="form-control form-control-sm tftl-type" name="tftl-type">
                                 <option>Any Type</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 mb-3">
-                            <button class="btn btn-warning btn-block reset-tftl-controls">Reset Controls</button>
+                        <div class="col-lg-3">
+                            <select class="form-control form-control-sm tftl-age" name="tftl-age">
+                                <option>Any Age</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row mb-3 col-lg-12">
-                        <div class="tftl-character">
-                            <div class="row">
-                                <div class="col-lg-6 mb-4 pull-left">
-                                    <div class="border-bottom pb-2 mb-2"><strong>Details</strong></div>
-                                    <div class="type"><strong>Type</strong> <span class="fill"></span></div>
-                                    <div class="age"><strong>Age</strong> <span class="fill"></span></div>
-                                    <div class="iconic-item"><strong>Iconic Item</strong> <span class="fill"></span></div>
-                                    <div class="drive"><strong>Drive</strong> <span class="fill"></span></div>
-                                    <div class="pride"><strong>Pride</strong> <span class="fill"></span></div>
-                                    <div class="problem"><strong>Problem</strong> <span class="fill"></span></div>
-                                    <div class="anchor"><strong>Anchor</strong> <span class="fill"></span></div>
-                                    <div class="npc-relationship"><strong>NPC Relationship</strong> <span class="fill"></span></div>
-                                </div>
-                                <div class="col-lg-2 mb-4 attributes">
-                                    <div class="border-bottom pb-2 mb-2"><strong>Attributes</strong></div>
-                                    <div class="body">Body <span class="fill"></span></div>
-                                    <div class="tech">Tech <span class="fill"></span></div>
-                                    <div class="heart">Heart <span class="fill"></span></div>
-                                    <div class="mind">Mind <span class="fill"></span></div>
-                                </div>
-                                <div class="col-lg-4 mb-4 skills">
-                                    <div class="border-bottom pb-2 mb-2"><strong>Skills</strong></div>
-                                    <div class="autocols-2 fill"></div>
-                                </div>
+                    <div class="tftl-character">
+                        <div class="row">
+                            <div class="col-lg-6 mb-4 pull-left">
+                                <div class="border-bottom pb-2 mb-2"><strong>Details</strong></div>
+                                <div class="type"><strong>Type</strong> <span class="fill"></span></div>
+                                <div class="age"><strong>Age</strong> <span class="fill"></span></div>
+                                <div class="iconic-item"><strong>Iconic Item</strong> <span class="fill"></span></div>
+                                <div class="drive"><strong>Drive</strong> <span class="fill"></span></div>
+                                <div class="pride"><strong>Pride</strong> <span class="fill"></span></div>
+                                <div class="problem"><strong>Problem</strong> <span class="fill"></span></div>
+                                <div class="anchor"><strong>Anchor</strong> <span class="fill"></span></div>
+                                <div class="npc-relationship"><strong>NPC Relationship</strong> <span class="fill"></span></div>
+                            </div>
+                            <div class="col-lg-2 mb-4 attributes">
+                                <div class="border-bottom pb-2 mb-2"><strong>Attributes</strong></div>
+                                <div class="body">Body <span class="fill"></span></div>
+                                <div class="tech">Tech <span class="fill"></span></div>
+                                <div class="heart">Heart <span class="fill"></span></div>
+                                <div class="mind">Mind <span class="fill"></span></div>
+                            </div>
+                            <div class="col-lg-4 mb-4 skills">
+                                <div class="border-bottom pb-2 mb-2"><strong>Skills</strong></div>
+                                <div class="autocols-2 fill"></div>
                             </div>
                         </div>
                     </div>

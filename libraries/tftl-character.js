@@ -249,12 +249,12 @@ var types = {
     },
 }
 
-function tftlGenerateCharacter(type) {
+function tftlGenerateCharacter(type, age) {
     // Type and stats
     var type = type ? type : getRandomElement(Object.keys(types));
+    var age = age ? age : getRandomInt(10, 15);
     var typeDetails = types[type];
     var keySkills = typeDetails['keySkills'];
-    var age = getRandomInt(10, 15);
     var attributePoints = age - 4;
     var skillPoints = 10;
 
@@ -339,10 +339,14 @@ function tftlGenerateCharacter(type) {
 // Generate character event
 $('.tftl-generate-character').click(function() {
     var type = '';
+    var age = '';
     if ($('.tftl-type').val() != 'Any Type') {
         type = $('.tftl-type').val();
     }
-    tftlGenerateCharacter(type);
+    if ($('.tftl-age').val() != 'Any Age') {
+        age = $('.tftl-age').val();
+    }
+    tftlGenerateCharacter(type, age);
 });
 
 // Function to handle updating types
@@ -360,6 +364,7 @@ function tftlFillTypes() {
 // Reset controls
 $('.reset-tftl-controls').click(function() {
     $('.tftl-type').val('Any Type');
+    $('.tftl-age').val('Any Age');
 });
 
 // Always generate a random character

@@ -5,28 +5,26 @@ var characteristics = ["Fat","Skinny","Good-looking","Seductive","Smells bad","S
 var activities = ["Searching","Making friends","Rambling tediously","Flirts","Looking for a fight","On a stroll","Working","Chasing something","Is lost","Guarding something","Brat Drinking","Partying","Eating","Bickering","In a discussion","Studying","Reading","Resting","Mending something","Showing something","Staring","Hanging out","Smoking","Writing","Preaching","Hiding","Sleeping","On a delivery","Looking to sell something","Using a tabula","Collapsing","Stealing something","Praying to an Icon","Threatening someone","Helping someone","Getting into trouble"];
 
 $(document).ready(function(){
-    $(".generate-npcs").click(function(){ getNPCs(); });
-    getNPCs();
+    $(".generate-npcs").click(function(){ getNPCs(8, "left"); getNPCs(8, "right"); });
+    getNPCs(8, "left");
+    getNPCs(8, "right");
 });
 
-function getNPCs(count=16) {
-    $(".npcs").empty();
-    for (let index = 0; index < count; index++) {
-        getNPC();
+function getNPCs(count, side) {
+    $(".npcs-" + side).empty();
+    for (let index = 1; index <= count; index++) {
+        let npc = getNPC();
+        $(".npcs-" + side).append(npc);
     }
 }
 
 function getNPC() {
-    var firstName = getRandomElement(firstNames);
-    var lastName = getRandomElement(lastNames);
-    var profession = getRandomElement(professions);
-    var characteristic = getRandomElement(characteristics);
-    var activity = getRandomElement(activities);
-    var npc = `<div class="npc">
-            <div class="name">{0} {1}</div>
-            <div class="profession">{2}</div>
-            <div class="characteristic">{3}</div>
-            <div class="activity">{4}</div>
-        </div>`.format(firstName, lastName, profession, characteristic, activity);
-    $(".npcs").append(npc);
+    let npc = `<tr><td><strong>{0} {1}</strong></td><td>{2}, {3}, {4}</td></tr>`.format(
+        getRandomElement(firstNames),
+        getRandomElement(lastNames),
+        getRandomElement(professions),
+        getRandomElement(characteristics),
+        getRandomElement(activities)
+    );
+    return npc;
 }
