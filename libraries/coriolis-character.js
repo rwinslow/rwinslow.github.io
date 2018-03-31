@@ -374,15 +374,32 @@ function coriolisGenerateCharacter(background, concept, subconcept) {
         }
     }
 
-    // Set skills
+    // Set skills and ensure talent-related skills get at least one point.
+    function baseTalentSkill(talentName, skillName, value=1) {
+        if (talent == talentName) {
+            skills[skillName] = value;
+            skillPoints = skillPoints - value;
+        }
+    }
+    baseTalentSkill('Soothing', 'Medicurgy');
+    baseTalentSkill('Field Medicurg', 'Medicurgy');
+    baseTalentSkill('Mystical Power', 'Mystic Powers');
+    baseTalentSkill('Gearhead', 'Technology');
     while (skillPoints) {
         const skill = getRandomElement(Object.keys(skills));
         var increment = 0;
+
+        // Need the talent to increment mystic
+        if (skill == 'Mystic Powers' && talent != 'Mystical Power') {
+            continue;
+        }
+
         if (subconceptSkills.includes(skill) && skills[skill] < 3) {
             increment = Math.min(getRandomInt(1, 3 - skills[skill]), skillPoints);
         } else if (skills[skill] < 1) {
             increment = 1;
         }
+
         skills[skill] = skills[skill] + increment;
         skillPoints = skillPoints - increment;
     }
