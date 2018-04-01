@@ -25,7 +25,7 @@ var origins = [
     'Kua',
     'Dabaran',
     'Zalos'
-]
+];
 
 var icons = [
     'The Lady of Tears',
@@ -37,7 +37,29 @@ var icons = [
     'The Messenger',
     'The Judge',
     'The Faceless',
-]
+];
+
+var generalSkills = [
+    'Dexterity',
+    'Force',
+    'Infiltration',
+    'Manipulation',
+    'Melee Combat',
+    'Observation',
+    'Ranged Combat',
+    'Survival',
+];
+
+var advancedSkills = [
+    'Command',
+    'Culture',
+    'Data Djinn',
+    'Medicurgy',
+    'Mystic Powers',
+    'Pilot',
+    'Science',
+    'Technology',
+];
 
 var concepts = {
     'Artist': {
@@ -304,7 +326,7 @@ var concepts = {
             ['Environment scanner', 'Compass']
         ]
     },
-}
+};
 
 function coriolisGenerateCharacter(background, concept, subconcept) {
     // Background and upbringing
@@ -404,11 +426,17 @@ function coriolisGenerateCharacter(background, concept, subconcept) {
         skillPoints = skillPoints - increment;
     }
     // Assemble skills into string.
-    var skillsOut = [];
+    var generalSkillsOut = [];
+    var advancedSkillsOut = [];
     for (let i = 0; i < Object.keys(skills).length; i++) {
         const skillName = Object.keys(skills)[i];
         if (skills[skillName] > 0) {
-            skillsOut.push('<div class="skill">{0} {1}</div>'.format(skillName, skills[skillName]));
+            var skillOut = '<tr><td><strong>{0}</strong></td><td>{1}</span></td></tr>'.format(skillName, skills[skillName]);
+            if (generalSkills.includes(skillName)) {
+                generalSkillsOut.push(skillOut);
+            } else if (advancedSkills.includes(skillName)) {
+                advancedSkillsOut.push(skillOut);
+            }
         }
     }
 
@@ -425,27 +453,28 @@ function coriolisGenerateCharacter(background, concept, subconcept) {
     }
     var gearOut = [];
     for (let i = 0; i < gear.length; i++) {
-        gearOut.push('<div class="item">{0}</div>'.format(gear[i]));
+        gearOut.push('<tr><td>{0}</td></tr>'.format(gear[i]));
     }
 
     // Fill page
-    $('.coriolis-character .background .fill').html(background);
-    $('.coriolis-character .concept .fill').html(concept);
-    $('.coriolis-character .subconcept .fill').html(subconcept);
-    $('.coriolis-character .strength .fill').html(attributes['Strength']);
-    $('.coriolis-character .agility .fill').html(attributes['Agility']);
-    $('.coriolis-character .wits .fill').html(attributes['Wits']);
-    $('.coriolis-character .empathy .fill').html(attributes['Empathy']);
-    $('.coriolis-character .face .fill').html(face);
-    $('.coriolis-character .clothing .fill').html(clothing);
-    $('.coriolis-character .talent .fill').html(talent);
-    $('.coriolis-character .icon .fill').html(icon);
-    $('.coriolis-character .problem .fill').html(problem);
-    $('.coriolis-character .reputation .fill').html(reputation);
-    $('.coriolis-character .birr .fill').html(birr);
-    $('.coriolis-character .origin .fill').html(origin);
-    $('.coriolis-character .gear .fill').html(gearOut.join(''));
-    $('.coriolis-character .skills .fill').html(skillsOut.join('\n'));
+    $('.coriolis-character .background.fill').html(background);
+    $('.coriolis-character .concept.fill').html(concept);
+    $('.coriolis-character .subconcept.fill').html(subconcept);
+    $('.coriolis-character .strength.fill').html(attributes['Strength']);
+    $('.coriolis-character .agility.fill').html(attributes['Agility']);
+    $('.coriolis-character .wits.fill').html(attributes['Wits']);
+    $('.coriolis-character .empathy.fill').html(attributes['Empathy']);
+    $('.coriolis-character .face.fill').html(face);
+    $('.coriolis-character .clothing.fill').html(clothing);
+    $('.coriolis-character .talent.fill').html(talent);
+    $('.coriolis-character .icon.fill').html(icon);
+    $('.coriolis-character .problem.fill').html(problem);
+    $('.coriolis-character .reputation.fill').html(reputation);
+    $('.coriolis-character .birr.fill').html(birr);
+    $('.coriolis-character .origin.fill').html(origin);
+    $('.coriolis-character .gear.fill').html(gearOut.join(''));
+    $('.coriolis-character .general-skills.fill').html(generalSkillsOut.join('\n'));
+    $('.coriolis-character .advanced-skills.fill').html(advancedSkillsOut.join('\n'));
 }
 
 // Generate character event
