@@ -447,8 +447,9 @@ function coriolisGenerateCharacter(background, concept, subconcept) {
             // Ensure cybernetic gear chosen if character has matching talent
             gear[i] = talent;
         } else {
-            // Randomly choose from only non-cybernetic gear
-            gear[i] = getRandomElement(coriolisNonCybGear(gearOptions));
+            // Randomly choose from only non-typed gear
+            gear[i] = getRandomElement(
+                coriolisNonTypeGear(coriolisNonTypeGear(gearOptions, 'BIO'), 'CYB'));
         }
     }
     var gearOut = [];
@@ -494,11 +495,11 @@ $('.coriolis-generate-character').click(function() {
     coriolisGenerateCharacter(background, concept, subconcept);
 });
 
-function coriolisNonCybGear(gearOptions) {
+function coriolisNonTypeGear(gearOptions, type) {
     let nonCybGear = [];
     for (let i = 0; i < gearOptions.length; i++) {
         const gear = gearOptions[i];
-        if (!gear.includes('CYB')) {
+        if (!gear.includes(type)) {
             nonCybGear.push(gear);
         }
     }
