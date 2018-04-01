@@ -316,24 +316,24 @@ function tftlGenerateCharacter(type, age) {
     for (let i = 0; i < Object.keys(skills).length; i++) {
         const skillName = Object.keys(skills)[i];
         if (skills[skillName] > 0) {
-            skillsOut.push('<div class="skill">{0} {1}</div>'.format(skillName, skills[skillName]));
+            skillsOut.push('<tr><td class="skill">{0}</td><td>{1}</td></tr>'.format(skillName, skills[skillName]));
         }
     }
 
     // Fill page
-    $('.tftl-character .type .fill').html(type);
-    $('.tftl-character .body .fill').html(attributes['Body']);
-    $('.tftl-character .tech .fill').html(attributes['Tech']);
-    $('.tftl-character .heart .fill').html(attributes['Heart']);
-    $('.tftl-character .mind .fill').html(attributes['Mind']);
-    $('.tftl-character .age .fill').html(age);
-    $('.tftl-character .iconic-item .fill').html(iconicItem);
-    $('.tftl-character .problem .fill').html(problem);
-    $('.tftl-character .npc-relationship .fill').html(npcRelationship);
-    $('.tftl-character .anchor .fill').html(anchor);
-    $('.tftl-character .pride .fill').html(pride);
-    $('.tftl-character .drive .fill').html(drive);
-    $('.tftl-character .skills .fill').html(skillsOut.join('\n'));
+    $('.tftl-character .type.fill').html(type);
+    $('.tftl-character .body.fill').html(attributes['Body']);
+    $('.tftl-character .tech.fill').html(attributes['Tech']);
+    $('.tftl-character .heart.fill').html(attributes['Heart']);
+    $('.tftl-character .mind.fill').html(attributes['Mind']);
+    $('.tftl-character .age.fill').html(age);
+    $('.tftl-character .iconic-item.fill').html(iconicItem);
+    $('.tftl-character .problem.fill').html(problem);
+    $('.tftl-character .npc-relationship.fill').html(npcRelationship);
+    $('.tftl-character .anchor.fill').html(anchor);
+    $('.tftl-character .pride.fill').html(pride);
+    $('.tftl-character .drive.fill').html(drive);
+    $('.tftl-character .skills.fill').html(skillsOut.join('\n'));
 }
 
 // Generate character event
