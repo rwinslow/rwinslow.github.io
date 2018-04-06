@@ -73,7 +73,7 @@ body {
   color: #999999;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li.toggle a:hover {
   text-decoration: none;
   color: #fff;
   background: rgba(255, 255, 255, 0.2);
@@ -97,21 +97,29 @@ body {
   background: none;
 }
 
-.sidebar-nav li a.on,
-.sidebar-nav li a.on:hover {
-    text-decoration: none;
-    color: #fff;
-    background-color: rgb(0, 110, 255, 0.6);
+.sidebar-nav li.toggle a:hover {
+  background: rgba(128, 128, 128, 0.2);
+}
+
+.sidebar-nav li.toggle a.on,
+.sidebar-nav li.toggle a.on:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(0, 110, 255, 0.6);
 }
 
 .sidebar-nav li.sidebar-section {
-  color: #999999;
   font-size: 1.2em;
   margin-top: 1em;
 }
 
-.sidebar-nav li a:hover {
-  background: rgba(128, 128, 128, 0.2);
+.sidebar-nav li.sidebar-section .title {
+  color: #999999;
+}
+
+.sidebar-nav .sidebar-section .btn {
+  color: #ffffff;
+  display: inline;
 }
 
 @media(min-width:768px) {

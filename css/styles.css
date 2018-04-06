@@ -33,10 +33,6 @@
     column-count: 3;
 }
 
-.pull-left {
-    float: left;
-}
-
 @media(max-width: 768px) {
     .autocols-2,
     .autocols-3 {
