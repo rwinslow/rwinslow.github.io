@@ -83,7 +83,7 @@ var concepts = {
             ['Opor','Environment scanner'],
             ['Exquisite clothing','Musical instrument'],
             ['Beautiful (BIO)','Rare collection of poems'],
-            ['The memoirs of Mazelman', 'Standing reservation at Mazelman Alkamaar\'s'],
+            ['The memoirs of Mazelman', 'Standing reservation at Alkamaar\'s'],
         ]
     },
     'Data Spider': {
