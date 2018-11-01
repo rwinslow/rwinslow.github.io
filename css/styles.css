@@ -41,3 +41,7 @@
         column-count: 1;
     }
 }
+
+th {
+  text-transform: uppercase;
+}
